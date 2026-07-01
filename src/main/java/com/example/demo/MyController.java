@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MyController {
 
     @Autowired
-    @Qualifier("cannoPrinter")
+    @Qualifier("hpPrinter")
     public Printer printer;
 
     @RequestMapping("/test")

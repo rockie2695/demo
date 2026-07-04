@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,5 +31,18 @@ public class MyController {
         list.add("橘子");
         store.setProductList(list);
         return store;
+    }
+
+    @RequestMapping("/test1")
+    public String test1(@RequestParam Integer id) {
+        System.out.println("id 的值為: " + id);
+        return "請求成功";
+    }
+
+    @RequestMapping("/test2")
+    public String test2(@RequestBody Student student) {
+        System.out.println("student 中的 id 值為: " + student.getId());
+        System.out.println("student 中的 name 值為: " + student.getName());
+        return "請求成功";
     }
 }

@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,7 +13,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 @RestController
-public class DemoApplication extends SpringBootServletInitializer implements ApplicationRunner {
+public class DemoApplication extends SpringBootServletInitializer implements CommandLineRunner {
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(DemoApplication.class);
@@ -23,8 +24,8 @@ public class DemoApplication extends SpringBootServletInitializer implements App
 	}
 
 	@Override
-	public void run(ApplicationArguments arg0) throws Exception {
-		System.out.println("Hello World from Application Runner");
+	public void run(String... arg0) throws Exception {
+		System.out.println("Hello world from Command Line Runner");
 	}
 
 	@GetMapping("/hello")

@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -10,7 +12,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 @RestController
-public class DemoApplication extends SpringBootServletInitializer {
+public class DemoApplication extends SpringBootServletInitializer implements ApplicationRunner {
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(DemoApplication.class);
@@ -18,6 +20,11 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+	}
+
+	@Override
+	public void run(ApplicationArguments arg0) throws Exception {
+		System.out.println("Hello World from Application Runner");
 	}
 
 	@GetMapping("/hello")

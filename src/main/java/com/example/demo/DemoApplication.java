@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -16,6 +18,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 @RestController
 public class DemoApplication extends SpringBootServletInitializer implements CommandLineRunner {
+	private static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
+
 	@Value("${spring.application.name:demoservice}")
 	private String name;
 
@@ -25,6 +29,9 @@ public class DemoApplication extends SpringBootServletInitializer implements Com
 	}
 
 	public static void main(String[] args) {
+		logger.info("this is a info message");
+		logger.warn("this is a warn message");
+		logger.error("this is a error message");
 		SpringApplication.run(DemoApplication.class, args);
 	}
 

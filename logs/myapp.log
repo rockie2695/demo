@@ -37,3 +37,19 @@
 2026-07-19 20:05:44 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2026-07-19 20:05:44 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
 2026-07-19 20:05:44 INFO  com.example.demo.DemoApplication - Started DemoApplication in 0.977 seconds (process running for 1.307)
+2026-07-19 23:37:02 INFO  com.example.demo.DemoApplication - this is a info message
+2026-07-19 23:37:02 WARN  com.example.demo.DemoApplication - this is a warn message
+2026-07-19 23:37:02 ERROR com.example.demo.DemoApplication - this is a error message
+2026-07-19 23:37:02 INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 21.0.11 with PID 32632 (C:\Users\rocki\demo\build\classes\java\main started by rocki in C:\Users\rocki\demo)
+2026-07-19 23:37:02 INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-19 23:37:03 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-19 23:37:03 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-19 23:37:03 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-19 23:37:03 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-19 23:37:03 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 604 ms
+2026-07-19 23:37:03 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-19 23:37:03 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-19 23:37:03 INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.169 seconds (process running for 1.543)
+2026-07-19 23:37:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-19 23:37:03 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-19 23:37:03 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms

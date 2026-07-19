@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.exception.ProductNotfoundException;
 import com.example.demo.model.Product;
+import com.example.demo.exception.ProductNotfoundException;
+
 
 @RestController
 public class ProductServiceController {
@@ -38,6 +41,8 @@ public class ProductServiceController {
 
     @PutMapping(value = "/products/{id}")
     public ResponseEntity<Object> updateProduct(@PathVariable("id") String id, @RequestBody Product product) {
+        if (!productRepo.containsKey(id))
+            throw new ProductNotfoundException();
         productRepo.remove(id);
         product.setId(id);
         productRepo.put(id, product);
